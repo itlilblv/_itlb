@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title>The 8 & 9 Protocol | Voynich Research Portal</title>
+    <style>
+        body { font-family: 'Times New Roman', serif; background: #fdfbf7; line-height: 1.6; padding: 20px; color: #333; }
+        header { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #2c3e50; padding-bottom: 10px; }
+        .tabs { display: flex; border-bottom: 2px solid #2c3e50; margin-top: 20px; }
+        .tab-btn { padding: 10px 20px; cursor: pointer; background: #eee; border: none; margin-left: 5px; font-weight: bold; }
+        .tab-btn.active { background: #2c3e50; color: white; }
+        .tab-content { display: none; padding: 20px; background: white; border-radius: 5px; border: 1px solid #ddd; }
+        .tab-content.active { display: block; }
+        img { max-width: 300px; height: auto; border: 1px solid #ccc; margin: 10px 0; display: block; }
+        .lang-btn { background: #2c3e50; color: white; border: none; padding: 10px 15px; cursor: pointer; }
+        .gallery-item { border-bottom: 1px solid #eee; margin-bottom: 20px; padding-bottom: 10px; }
+        /* Language handling */
+        .ar-text { display: none; }
+        html[lang="ar"] .en-text { display: none; }
+        html[lang="ar"] .ar-text { display: block; }
+    </style>
+</head>
+<body>
+
+<header>
+    <button class="lang-btn" onclick="toggleLang()">EN / AR</button>
+    <h1>The 8 & 9 Protocol</h1>
+</header>
+
+<div class="tabs">
+    <button class="tab-btn active" onclick="openTab(event, 'story')">The Discovery</button>
+    <button class="tab-btn" onclick="openTab(event, 'method')">Methodology</button>
+    <button class="tab-btn" onclick="openTab(event, 'gallery')">Research Atlas</button>
+</div>
+
+<!-- Story Tab -->
+<div id="story" class="tab-content active">
+    <div class="en-text">
+        <h2>The Story of Discovery</h2>
+        <p>My journey began on May 12, 2026. After AI systems failed to solve the manuscript, I applied historical Andalusian cryptographic techniques. I discovered that the manuscript is a specialized pharmaceutical guide, written in Andalusian Romance, camouflaged to protect medicinal secrets. This work is dedicated to uncovering the legacy of Ibn al-Baitar and his forgotten teacher.</p>
+    </div>
+    <div class="ar-text">
+        <h2>قصة الاكتشاف</h2>
+        <p>بدأت رحلتي في 12 مايو 2026. بعد أن عجزت أنظمة الذكاء الاصطناعي عن حل المخطوطة، قررت تطبيق تقنيات التشفير العربية التاريخية. اكتشفت أن المخطوطة هي دليل صيدلاني متخصص، كُتب باللغة الأندلسية الأعجمية، وشُفر لحماية الأسرار الدوائية. هذا العمل مهدى لكشف إرث ابن البيطار وأستاذه المفقود.</p>
+    </div>
+</div>
+
+<!-- Methodology Tab -->
+<div id="method" class="tab-content">
+    <div class="en-text">
+        <h2>Methodology: The 8 & 9 Protocol</h2>
+        <ul>
+            <li><strong>9:</strong> Represents 'Damma'.</li>
+            <li><strong>8:</strong> Represents 'Sukun'.</li>
+            <li><strong>Camouflage:</strong> Left-to-right direction was a historical deception.</li>
+        </ul>
+    </div>
+    <div class="ar-text">
+        <h2>المنهجية: بروتوكول 8 و 9</h2>
+        <ul>
+            <li><strong>9:</strong> تمثل الضمة.</li>
+            <li><strong>8:</strong> تمثل السكون.</li>
+            <li><strong>التمويه:</strong> الكتابة من اليسار لليمين كانت وسيلة تضليل تاريخية.</li>
+        </ul>
+    </div>
+</div>
+
+<!-- Gallery Tab -->
+<div id="gallery" class="tab-content">
+    <h2 class="en-text">Research Atlas</h2>
+    <h2 class="ar-text">المعرض البحثي</h2>
+    
+    <!-- Page 1 -->
+    <div class="gallery-item">
+        <h3>Plantago (لسان الحمل)</h3>
+        <img src="image.png" alt="Plantago">
+        <p>Root (L-S) matches Ibn al-Baitar's description of Plantago for wounds.</p>
+    </div>
+    <!-- Page 2 -->
+    <div class="gallery-item">
+        <h3>Amaranthus (القُطَيْفَة)</h3>
+        <img src="image_2.png" alt="Amaranthus">
+        <p>Deciphered as a manual for distillation extracts.</p>
+    </div>
+    <!-- Page 3 -->
+    <div class="gallery-item">
+        <h3>Eryngium (القُرصعنة)</h3>
+        <img src="image_8.png" alt="Eryngium">
+        <p>Identified by radial floral morphology and root-stem analysis.</p>
+    </div>
+    <!-- Page 4 -->
+    <div class="gallery-item">
+        <h3>Nymphaea (الزنبق المائي)</h3>
+        <img src="image_4.png" alt="Nymphaea">
+        <p>Text describes cooling properties of the aquatic plant.</p>
+    </div>
+    <!-- Page 5 -->
+    <div class="gallery-item">
+        <h3>Andalusian Fern (الرَّنْد)</h3>
+        <img src="image_5.png" alt="Fern">
+        <p>Thermal balance protocol based on plant color markers.</p>
+    </div>
+    <!-- Page 6 -->
+    <div class="gallery-item">
+        <h3>Centaurea (القنطريون)</h3>
+        <img src="image_6.png" alt="Centaurea">
+        <p>Technical extraction records of root nodal substances.</p>
+    </div>
+</div>
+
+<script>
+    function openTab(evt, tabName) {
+        document.querySelectorAll('.tab-content').forEach(c => c.style.display = 'none');
+        document.querySelectorAll('.tab-btn').forEach(b =>Normally I can help with things like this, but I don't seem to have access to that content. You can try again or ask me for something else.
